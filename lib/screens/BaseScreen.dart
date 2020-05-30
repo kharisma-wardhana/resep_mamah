@@ -9,15 +9,32 @@ class BaseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
         title: "Resep mamah",
         showBackbtn: false,
+        widgets: <Widget>[
+          IconButton(
+            onPressed: null,
+            icon: Icon(
+              EvaIcons.search,
+              color: fontColor,
+            ),
+          ),
+          IconButton(
+            onPressed: null,
+            icon: Icon(
+              EvaIcons.gridOutline,
+              color: fontColor,
+            ),
+          )
+        ],
       ),
       body: Container(
         child: Row(
           children: <Widget>[
             Container(
-                width: size.width * 0.2,
+                width: size.width * 0.15,
                 height: size.height,
                 margin: EdgeInsets.only(top: 10, bottom: 20),
                 decoration: BoxDecoration(

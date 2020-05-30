@@ -1,5 +1,6 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:resep_mamah/screens/home/CardFood.dart';
 import 'package:resep_mamah/style/theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,32 +17,68 @@ class _HomeScreenState extends State<HomeScreen> {
       height: size.height,
       child: Column(
         children: <Widget>[
-          CustomFont(
-            text: "Content",
-            textSize: titleSize,
-            textWeight: FontWeight.bold,
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              side: BorderSide(color: mainColorDark, width: 1),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            margin: EdgeInsets.all(20.0),
-            child: Container(
-              width: size.width * 0.7,
-              height: size.height * 0.8,
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(
-                  colors: <Color>[mainColor, mainColorDark],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {},
+                    color: secondColor,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: mainColorDark, width: 1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: CustomFont(
+                      text: "Desert",
+                      textSize: 14,
+                      textColor: Colors.white,
+                      textWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    width: size.width * 0.01,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    color: mainColor,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: mainColor, width: 1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: CustomFont(
+                      text: "Main Course",
+                      textSize: 14,
+                      textColor: fontColor,
+                      textWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    width: size.width * 0.01,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    color: mainColor,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: mainColor, width: 1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: CustomFont(
+                      text: "Appetizer",
+                      textSize: 14,
+                      textColor: fontColor,
+                      textWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
-              child: Text("Menu"),
             ),
           ),
+          CardFood(),
         ],
       ),
     );
