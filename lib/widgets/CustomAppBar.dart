@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading:
           showBackbtn ? Icon(Icons.arrow_back_ios, color: mainColorDark) : null,
       centerTitle: false,
-      backgroundColor: mainColor,
+      backgroundColor: Colors.transparent,
       actions: widgets,
     );
   }

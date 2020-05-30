@@ -12,50 +12,34 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      child: Row(
+      width: size.width * 0.8,
+      height: size.height,
+      child: Column(
         children: <Widget>[
-          Container(
-              width: size.width * 0.2,
-              height: size.height,
-              child: Column(
-                children: <Widget>[
-                  CustomFont(
-                    text: "Breakfast",
-                    textColor: mainColor,
-                    textWeight: FontWeight.bold,
-                    textSize: 16,
-                  ),
-                  CustomFont(
-                      text: "Lunch",
-                      textColor: mainColor,
-                      textWeight: FontWeight.bold,
-                      textSize: 16),
-                  CustomFont(
-                      text: "Dinner",
-                      textColor: mainColor,
-                      textWeight: FontWeight.bold,
-                      textSize: 16),
-                  IconButton(
-                    icon: Icon(
-                      EvaIcons.settings2Outline,
-                      color: mainColor,
-                      size: 16,
-                    ),
-                    onPressed: null,
-                  )
-                ],
-              )),
-          Container(
-            width: size.width * 0.8,
-            height: size.height,
-            child: Column(
-              children: <Widget>[
-                CustomFont(
-                  text: "Content",
-                  textSize: titleSize,
-                  textWeight: FontWeight.bold,
-                )
-              ],
+          CustomFont(
+            text: "Content",
+            textSize: titleSize,
+            textWeight: FontWeight.bold,
+          ),
+          Card(
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: mainColorDark, width: 1),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            margin: EdgeInsets.all(20.0),
+            child: Container(
+              width: size.width * 0.7,
+              height: size.height * 0.8,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                  colors: <Color>[mainColor, mainColorDark],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Text("Menu"),
             ),
           ),
         ],

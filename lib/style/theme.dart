@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Colors
-final Color mainColor = const Color(0xFF4B4EA2);
-final Color mainColorDark = const Color(0xFF0F106A);
-final Color secondColor = const Color(0xFFF3BF56);
-final Color secondColorDark = const Color(0xFFFC9F1B);
-final Color fontColor = const Color(0xFFA4A7CE);
-final Color titleColor = const Color(0xFFD8D8FC);
+final Color mainColor = const Color(0xFFD1D3DB);
+final Color mainColorDark = const Color(0xFFB0BAD4);
+final Color secondColor = const Color(0xFFFF8B73);
+final Color secondColorDark = const Color(0xFFFF785B);
+final Color fontColor = const Color(0xFF3C556D);
+final Color titleColor = const Color(0xFF00203F);
 
 final double titleSize = 18.0;
 final double headingSize = 20.0;
