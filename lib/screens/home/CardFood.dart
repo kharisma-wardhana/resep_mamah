@@ -15,20 +15,19 @@ class _CardFoodState extends State<CardFood> {
       children: <Widget>[
         Card(
           shape: RoundedRectangleBorder(
-            side: BorderSide(color: mainColor, width: 4),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(30),
           ),
-          margin: EdgeInsets.all(15.0),
+          margin: EdgeInsets.all(10.0),
           child: Container(
-            width: size.width * 0.7,
+            width: size.width * 0.65,
             height: size.height * 0.75,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(30),
               gradient: LinearGradient(
                 colors: <Color>[mainColor, mainColorDark],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
               ),
             ),
             child: Column(
@@ -37,13 +36,11 @@ class _CardFoodState extends State<CardFood> {
                 Container(
                   margin: EdgeInsets.only(bottom: size.height * 0.3),
                 ),
-                Center(
-                  child: CustomFont(
-                    text: "Pudding Coklat",
-                    textSize: titleSize,
-                    textColor: fontColor,
-                    textWeight: FontWeight.bold,
-                  ),
+                CustomFont(
+                  text: "Pudding Coklat",
+                  textSize: titleSize,
+                  textColor: secondColorDark,
+                  textWeight: FontWeight.bold,
                 ),
                 CustomFont(
                   text:
@@ -57,7 +54,7 @@ class _CardFoodState extends State<CardFood> {
                 CustomFont(
                   text: "Ingredients : ",
                   textSize: titleSize,
-                  textColor: fontColor,
+                  textColor: secondColorDark,
                   textWeight: FontWeight.bold,
                 ),
                 CustomFont(
@@ -76,14 +73,14 @@ class _CardFoodState extends State<CardFood> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(top: 10, left: 5),
+                margin: EdgeInsets.only(top: 5),
                 decoration: BoxDecoration(boxShadow: <BoxShadow>[
                   BoxShadow(
-                    color: mainColorDark,
-                    offset: Offset(2, 3),
-                    blurRadius: 2,
+                    color: secondColorDark,
+                    offset: Offset(1.5, 2),
+                    blurRadius: 1.5,
                   ),
-                ], color: secondColorDark, shape: BoxShape.circle),
+                ], color: secondColor, shape: BoxShape.circle),
                 child: IconButton(
                   icon: Icon(
                     EvaIcons.heart,
@@ -93,9 +90,9 @@ class _CardFoodState extends State<CardFood> {
                 ),
               ),
               Container(
-                width: size.width * 0.625,
-                height: size.height * 0.282,
-                margin: EdgeInsets.only(top: 35),
+                width: size.width * 0.62,
+                height: size.height * 0.28,
+                margin: EdgeInsets.only(top: 25),
                 decoration: BoxDecoration(
                   boxShadow: <BoxShadow>[
                     BoxShadow(
