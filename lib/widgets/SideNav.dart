@@ -28,7 +28,7 @@ class _SideNavState extends State<SideNav> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-        width: size.width * 0.15,
+        width: size.width * 0.10,
         height: size.height,
         margin: EdgeInsets.only(top: 10, bottom: 20),
         decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class _SideNavState extends State<SideNav> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: size.height * 0.1,
+              height: size.height * 0.05,
             ),
             RotatedBox(
               quarterTurns: 3,
@@ -90,7 +90,7 @@ class _SideNavState extends State<SideNav> {
               ),
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: size.height * 0.05,
             ),
             IconButton(
               icon: Icon(

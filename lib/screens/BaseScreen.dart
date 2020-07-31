@@ -37,7 +37,7 @@ class BaseScreen extends StatelessWidget {
             children: <Widget>[
               SideNav(),
               Container(
-                width: size.width * 0.85,
+                width: size.width * 0.88,
                 height: size.height,
                 child: HomeScreen(),
               ),

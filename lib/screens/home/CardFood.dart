@@ -1,5 +1,6 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:resep_mamah/screens/home/ListIngredient.dart';
 import 'package:resep_mamah/style/theme.dart';
 
 class CardFood extends StatefulWidget {
@@ -19,8 +20,8 @@ class _CardFoodState extends State<CardFood> {
           ),
           margin: EdgeInsets.all(10.0),
           child: Container(
-            width: size.width * 0.65,
-            height: size.height * 0.75,
+            width: size.width * 0.7,
+            height: size.height * 0.72,
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
@@ -57,12 +58,7 @@ class _CardFoodState extends State<CardFood> {
                   textColor: secondColorDark,
                   textWeight: FontWeight.bold,
                 ),
-                CustomFont(
-                  text:
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-                  textSize: 12,
-                  textColor: titleColor,
-                )
+                ListIngredient(),
               ],
             ),
           ),
